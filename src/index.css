@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #fafafa;
+  color: #111827;
+}
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.sidebar-toggle {
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  padding: 1rem;
+}
+
+.left-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: min(80vw, 13.25rem);
+  max-width: 13.25rem;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  transform: translateX(-100%);
+  transition: transform 200ms ease;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-sidebar.open {
+  transform: translateX(0);
+}
+
+.left-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.left-sidebar__title {
+  font-weight: 600;
+}
+
+.left-sidebar__close {
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+}
+
+.left-sidebar__nav {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.left-sidebar__link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.left-sidebar__link:hover {
+  background: #f3f4f6;
+}
+
+.left-sidebar__link.is-active {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 30;
+}
+
+@media (min-width: 768px) {
+  .left-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    transform: none;
+    width: 100%;
+    max-width: 13.25rem;
+    flex: 0 0 13.25rem; 
+  }
+
+  .left-sidebar__close,
+  .sidebar-backdrop {
+    display: none;
+  }
+
+  .dashboard {
+    gap: 0; 
+  }
+}
