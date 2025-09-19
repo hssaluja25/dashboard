@@ -1,15 +1,10 @@
 import React from "react";
+import UserAvatar from "../atoms/UserAvatar";
 
 const LeftSidebar = ({ isOpen = false, onClose = () => {} }) => {
   return (
     <aside className={`left-sidebar ${isOpen ? "open" : ""}`}>
-      <div className="left-sidebar__header">
-        <span className="left-sidebar__title">Menu</span>
-        {/* Only shown on mobile */}
-        <button className="left-sidebar__close" onClick={onClose}>
-          ×
-        </button>
-      </div>
+      <UserAvatar onClose={onClose} />
       <nav className="left-sidebar__nav">
         {/* Later add logic for is-active */}
         <a href="#" className="left-sidebar__link is-active">
