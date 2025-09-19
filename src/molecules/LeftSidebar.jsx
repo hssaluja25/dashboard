@@ -1,10 +1,12 @@
 import React from "react";
 import UserAvatar from "../atoms/UserAvatar";
+import FavoritesBox from "./FavoritesBox";
 
 const LeftSidebar = ({ isOpen = false, onClose = () => {} }) => {
   return (
     <aside className={`left-sidebar ${isOpen ? "open" : ""}`}>
       <UserAvatar onClose={onClose} />
+      <FavoritesBox />
       <nav className="left-sidebar__nav">
         {/* Later add logic for is-active */}
         <a href="#" className="left-sidebar__link is-active">
