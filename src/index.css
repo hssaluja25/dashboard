@@ -269,6 +269,7 @@ html, body {
     flex-direction: column;
     flex: 0 0 18rem;
     max-width: 280px;
+    overflow: auto;
     width: 100%;
     padding: 16px 24px;
     border-left: 1px solid #e5e7eb;
@@ -337,19 +338,13 @@ html, body {
   align-items: center;
 }
 
-.act-avatar {
-  overflow: hidden;
-  position: relative;
-}
-
+.act-item:not(:first-child) .act-avatar::before,
 .act-item:not(:last-child) .act-avatar::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: 44px;
   transform: translateX(-50%);
   width: 1px;
-  height: 24px;
   background: #e5e7eb;
 }
 
@@ -367,4 +362,25 @@ html, body {
   font-size: 12px;
   line-height: 18px;
   color: #1C1C1C66;
+}
+
+.contacts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1C1C1C;
 }
