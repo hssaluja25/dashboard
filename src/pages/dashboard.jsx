@@ -5,6 +5,7 @@ import Header from "../molecules/Header";
 import Kpis from "../molecules/Kpis";
 import Projections from "../molecules/Projections";
 import RevenueChart from "../molecules/RevenueChart";
+import RevenueByLocation from "../molecules/RevenueByLocation";
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -44,6 +45,7 @@ const Dashboard = () => {
           <div style={{ marginTop: 28 }}>
             <RevenueChart />
           </div>
+          <RevenueByLocation />
         </section>
       </main>
 
