@@ -2,6 +2,7 @@ import React from "react";
 import UserAvatar from "../atoms/UserAvatar";
 import FavoritesBox from "./FavoritesBox";
 import DashboardsPicker from "./DashboardsPicker";
+import PagesPicker from "./PagesPicker";
 
 const LeftSidebar = ({ isOpen = false, onClose = () => {} }) => {
   return (
@@ -9,6 +10,7 @@ const LeftSidebar = ({ isOpen = false, onClose = () => {} }) => {
       <UserAvatar onClose={onClose} />
       <FavoritesBox />
       <DashboardsPicker />
+      <PagesPicker />
     </aside>
   );
 };
