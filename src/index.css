@@ -111,6 +111,17 @@ html, body {
   font-size: 14px;
   line-height: 20px;
 }
+.hdr-search input:focus {
+  color: #111827;
+}
+.hdr-search input:focus::placeholder {
+  color: #9ca3af;
+  opacity: 0.6;
+}
+.hdr-search:focus-within {
+  background: #eceff3;
+  box-shadow: inset 0 0 0 2px #e5e7eb;
+}
 .hdr-search .kbd-hint { 
   color: #9ca3af; 
   font-size: 12px; 
