@@ -4,6 +4,7 @@ import RightSidebar from "../molecules/RightSidebar";
 import Header from "../molecules/Header";
 import Kpis from "../molecules/Kpis";
 import Projections from "../molecules/Projections";
+import RevenueChart from "../molecules/RevenueChart";
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -40,6 +41,7 @@ const Dashboard = () => {
               <Projections />
             </div>
           </div>
+          <RevenueChart />
         </section>
       </main>
 

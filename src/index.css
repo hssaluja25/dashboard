@@ -21,6 +21,7 @@ body {
   --accent-subtle: #eef6ff;
   --bar-actual: #9dbbd2;
   --bar-proj: #cfe1ee;
+  --line-proj: #9dbbd2;
 }
 
 [data-theme="dark"] {
@@ -35,6 +36,14 @@ body {
   --accent-subtle: #10243f;
   --bar-actual: #6c96b1;
   --bar-proj: #345166;
+  --line-proj: #6c96b1;
+}
+
+.rev-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px 12px 12px 12px;
 }
 
 .dashboard {

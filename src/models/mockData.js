@@ -10,6 +10,34 @@ export const mockData = {
     growthChangePct: 6.08,
   },
 
+  revenues: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [
+      {
+        label: "Actuals",
+        data: [8, 17, 15, 10, 16, 23],
+        borderColor: "#A9CCE3",
+        tension: 0.4,
+        fill: false,
+      },
+      {
+        label: "Forecast (Solid)",
+        data: [12, 8, 9, 15, null, null],
+        borderColor: "#17202A",
+        tension: 0.4,
+        fill: false,
+      },
+      {
+        label: "Forecast (Dashed)",
+        data: [null, null, null, 15, 19, 20],
+        borderColor: "#17202A",
+        borderDash: [5, 5],
+        tension: 0.4,
+        fill: false,
+      },
+    ],
+  },
+
   monthly: [
     {
       month: "Jan",
