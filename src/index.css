@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-  --bg: #fafafa;
+  --bg: white;
   --surface: #ffffff;
   --surface-subtle: #f3f4f6;
   --text: #1C1C1C;
@@ -90,18 +90,17 @@ body {
 }
 
 .proj-card {
-  background: var(--surface);
+  background: #F7F9FB;
   border-radius: 16px;
-  border: 1px solid var(--border);
   padding: 16px;
   position: relative;
 }
 
 .proj-title {
-  font-size: 18px;
-  line-height: 28px;
-  color: var(--text);
-  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C1C1C;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
