@@ -83,6 +83,8 @@ body {
   transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
+  animation: loc-pop 360ms ease-out both;
+  animation-delay: var(--d, 0ms);
 }
 
 .loc-dot__inner {
@@ -90,6 +92,42 @@ body {
   height: 12px;
   background: #111;
   border-radius: 9999px;
+}
+
+.loc-dot .loc-tip {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translate(-50%, 4px);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease, transform 150ms ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .12);
+}
+
+.loc-dot:hover .loc-tip {
+  opacity: 1;
+  transform: translate(-50%, -2px);
+}
+
+@keyframes loc-pop {
+  from {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
 }
 
 .loc-list {
@@ -136,6 +174,12 @@ body {
   height: 100%;
   background: #a9c7dd;
   border-radius: inherit;
+  width: 0;
+  transition: width 500ms ease;
+}
+
+.loc-list.is-mounted .loc-bar__fill {
+  width: var(--w);
 }
 
 .dashboard {
