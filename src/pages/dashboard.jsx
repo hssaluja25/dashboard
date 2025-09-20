@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LeftSidebar from "../molecules/LeftSidebar";
 import RightSidebar from "../molecules/RightSidebar";
 import Header from "../molecules/Header";
+import Kpis from "../molecules/Kpis";
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -29,7 +30,8 @@ const Dashboard = () => {
         />
 
         <section className="dashboard-content">
-          <p>dashboard</p>
+          <p>eCommerce</p>
+          <Kpis />
         </section>
       </main>
 

@@ -68,6 +68,67 @@ html, body {
   padding: 1rem;
 }
 
+.kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.kpi-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.kpi-row {
+  margin-top: 8px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.kpi-value {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.kpi-change {
+  font-size: 14px;
+  line-height: 20px;
+}
+.kpi-change.is-positive { 
+  color: #10b981; 
+}
+.kpi-change.is-negative { 
+  color: #ef4444; 
+}
+
+.kpi-accent-blue { 
+  background: #eaf6ff; 
+  border-color: transparent; 
+}
+.kpi-accent-indigo {
+  background: #eaeefb; 
+  border-color: transparent; 
+}
+
+[data-theme="dark"] .kpi-accent-blue { 
+  background: #0e1b2b; 
+}
+[data-theme="dark"] .kpi-accent-indigo { 
+  background: #151a2b; 
+}
+
 .hdr-left {
   display: flex;
   align-items: center;
