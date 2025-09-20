@@ -90,10 +90,10 @@ export const mockData = {
   ],
 
   revenueByLocation: [
-    { name: "New York", revenue: 72000, lat: 40.7128, lon: -74.006 },
-    { name: "San Francisco", revenue: 39000, lat: 37.7749, lon: -122.4194 },
-    { name: "Sydney", revenue: 25000, lat: -33.8688, lon: 151.2093 },
-    { name: "Singapore", revenue: 61000, lat: 1.3521, lon: 103.8198 },
+    { name: "New York", revenue: 72000, left: "15%", top: "36%" },
+    { name: "San Francisco", revenue: 39000, left: "28%", top: "42%" },
+    { name: "Sydney", revenue: 25000, left: "84%", top: "77%" },
+    { name: "Singapore", revenue: 61000, left: "73%", top: "58%" },
   ],
 
   salesChannels: [

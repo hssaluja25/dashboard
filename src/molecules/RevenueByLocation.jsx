@@ -6,13 +6,6 @@ const RevenueByLocation = () => {
   const points = useMemo(() => mockData.revenueByLocation, []);
   const max = Math.max(...points.map((p) => p.revenue));
 
-  const coords = {
-    "New York": { left: "15%", top: "36%" },
-    "San Francisco": { left: "28%", top: "42%" },
-    Sydney: { left: "84%", top: "77%" },
-    Singapore: { left: "73%", top: "58%" },
-  };
-
   return (
     <section className="loc-card">
       <h3 className="loc-title">Revenue by Location</h3>
@@ -20,7 +13,11 @@ const RevenueByLocation = () => {
       <div className="loc-map">
         <img src={MapSvg} alt="World map" className="loc-map__img" />
         {points.map((p) => (
-          <span key={p.name} className="loc-dot" style={coords[p.name]}>
+          <span
+            key={p.name}
+            className="loc-dot"
+            style={{ left: p.left, top: p.top }}
+          >
             <span className="loc-dot__inner" />
           </span>
         ))}
