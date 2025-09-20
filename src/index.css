@@ -249,70 +249,16 @@ html, body {
 
 .rs-card {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 12px;
 }
 
 .rs-title {
-  color: #1C1C1C66;
-  font-weight: 500;
+  color: #1C1C1C;
+  font-weight: 600;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 8px;
 }
 
-.rs-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.rs-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #1C1C1C;
-}
-
-.rs-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 9999px;
-  background: #d1d5db;
-  display: inline-block;
-}
-
-.rs-note {
-  font-size: 14px;
-  line-height: 20px;
-  color: #1C1C1C;
-  background: #f9fafb;
-  border: 1px dashed #e5e7eb;
-  border-radius: 8px;
-  padding: 8px;
-  margin-top: 8px;
-}
-
-.rs-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.rs-btn {
-  appearance: none;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 14px;
-  line-height: 20px;
-  cursor: pointer;
-}
 
 @media (min-width: 768px) {
   .right-sidebar {
@@ -322,11 +268,57 @@ html, body {
     display: flex;
     flex-direction: column;
     flex: 0 0 18rem;
-    max-width: 18rem;
+    max-width: 280px;
     width: 100%;
-    padding: 16px;
+    padding: 16px 24px;
     border-left: 1px solid #e5e7eb;
     gap: 12px;
     background: white;
   }
+}
+
+.notif-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.notif-item {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+}
+
+.notif-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eef6ff;
+}
+
+.notif-text { 
+  min-width: 0; 
+  flex: 1; 
+}
+
+.notif-main {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1C1C1C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notif-time {
+  font-size: 14px;
+  line-height: 20px;
+  color: #9ca3af;
 }
