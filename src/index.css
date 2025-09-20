@@ -19,6 +19,8 @@ body {
   --hover: #568dc4;
   --active: #f3f4f6;
   --accent-subtle: #eef6ff;
+  --bar-actual: #9dbbd2;
+  --bar-proj: #cfe1ee;
 }
 
 [data-theme="dark"] {
@@ -31,6 +33,8 @@ body {
   --hover: #0b1220;
   --active: #1f2937;
   --accent-subtle: #10243f;
+  --bar-actual: #6c96b1;
+  --bar-proj: #345166;
 }
 
 .dashboard {
