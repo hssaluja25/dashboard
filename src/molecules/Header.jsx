@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { toggleTheme } from "@/store/appSlice";
 import SidebarIcon from "@/assets/Sidebar.svg";
 import StarIcon from "@/assets/Star.svg";
 import SearchIcon from "@/assets/Search.svg";
@@ -28,6 +30,8 @@ const Header = ({ setSidebarOpen, setRightSidebarOpen }) => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  const dispatch = useDispatch();
+
   return (
     <header className="dashboard-header">
       <div className="hdr-left">
@@ -56,7 +60,7 @@ const Header = ({ setSidebarOpen, setRightSidebarOpen }) => {
       </div>
 
       <div className="hdr-actions">
-        <button className="icon-btn">
+        <button className="icon-btn" onClick={() => dispatch(toggleTheme())}>
           <img src={SunIcon} alt="" className="icon" />
         </button>
         <button className="icon-btn">
