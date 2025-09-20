@@ -15,13 +15,16 @@ const formatMillions = (n) => `${Math.round(n / 1_000_000)}M`;
 
 const RevenueChart = () => {
   const data = useMemo(() => {
-    // Use first 4 months as "actual" (solid), then dashed forecast from projection.
-    const cutoff = 3; // index of Apr in the provided mock data
-    return mockData.monthly.map((d, i) => ({
-      name: d.month,
-      projection: d.projection,
-      actual: i <= cutoff ? d.revenue : null,
-      actualFuture: i > cutoff ? d.projection : null,
+    const { labels, datasets } = mockData.revenues;
+    const proj = datasets.find((d) => d.label.toLowerCase().includes("actual"));
+    const solid = datasets.find((d) => d.label.toLowerCase().includes("solid"));
+    const dashed = datasets.find((d) => d.label.toLowerCase().includes("dashed"));
+
+    return labels.map((label, i) => ({
+      name: label,
+      projection: proj?.data?.[i] != null ? proj.data[i] * 1_000_000 : null,
+      actual: solid?.data?.[i] != null ? solid.data[i] * 1_000_000 : null,
+      actualFuture: dashed?.data?.[i] != null ? dashed.data[i] * 1_000_000 : null,
     }));
   }, []);
 
@@ -71,7 +74,7 @@ const RevenueChart = () => {
 
             {/* Soft fill under the actual line */}
             <Area
-              type="monotone"
+              type="natural"
               dataKey="actual"
               stroke="none"
               fill="url(#revFill)"
@@ -81,32 +84,43 @@ const RevenueChart = () => {
 
             {/* Blue projection curve */}
             <Line
-              type="monotone"
+              type="natural"
               dataKey="projection"
               stroke="var(--line-proj)"
               strokeWidth={6}
               dot={false}
               activeDot={false}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              animationDuration={700}
+              animationEasing="ease-out"
             />
 
             {/* Solid actual to cutoff */}
             <Line
-              type="monotone"
+              type="natural"
               dataKey="actual"
               stroke="var(--text)"
               strokeWidth={6}
               dot={false}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              animationDuration={700}
+              animationEasing="ease-out"
             />
 
             {/* Dashed continuation */}
             <Line
-              type="monotone"
+              type="natural"
               dataKey="actualFuture"
               stroke="var(--text)"
               strokeWidth={6}
               strokeDasharray="6 8"
               dot={false}
               isAnimationActive={false}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              connectNulls
             />
           </LineChart>
         </ResponsiveContainer>
