@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import Orders from "./pages/Orders";
 import LeftSidebar from "./molecules/LeftSidebar";
 import RightSidebar from "./molecules/RightSidebar";
 
@@ -15,6 +17,7 @@ function App() {
   }, [theme]);
 
   return (
+    <BrowserRouter>
     <div className="dashboard">
       {sidebarOpen && (
         <LeftSidebar isOpen onClose={() => setSidebarOpen(false)} />
@@ -28,13 +31,14 @@ function App() {
         />
       )}
 
-      <Dashboard
-        setRightSidebarOpen={setRightSidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-      />
+      <Routes>
+        <Route path="/" element={<Dashboard setRightSidebarOpen={setRightSidebarOpen} setSidebarOpen={setSidebarOpen} />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
 
       {rightSidebarOpen && <RightSidebar />}
     </div>
+    </BrowserRouter>
   );
 }
 

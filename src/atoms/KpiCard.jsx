@@ -14,9 +14,17 @@ const Arrow = ({ value }) => {
   );
 };
 
-const KpiCard = ({ title, value, changePct = 0, prefix = "", suffix = "", accent = "" }) => {
+const KpiCard = ({
+  title,
+  value,
+  changePct = 0,
+  prefix = "",
+  suffix = "",
+  accent = "",
+  onClick,
+}) => {
   return (
-    <section className={`kpi-card ${accent}`}>
+    <section className={`kpi-card ${accent}`} onClick={onClick}>
       <div className="kpi-title">{title}</div>
       <div className="kpi-row">
         <div className="kpi-value">

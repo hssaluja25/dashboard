@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import KpiCard from "@/atoms/KpiCard";
 import { mockData } from "@/models/mockData";
 
@@ -6,6 +7,7 @@ const numberFormat = (n) => n.toLocaleString();
 
 const Kpis = () => {
   const { kpis } = mockData;
+  const navigate = useNavigate();
   return (
     <div className="kpis-grid">
       <KpiCard
@@ -19,6 +21,7 @@ const Kpis = () => {
         title="Orders"
         value={numberFormat(kpis.orders)}
         changePct={kpis.ordersChangePct}
+        onClick={() => navigate("/orders")}
       />
 
       <KpiCard
