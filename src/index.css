@@ -75,7 +75,7 @@ html, body {
 }
 
 .kpi-card {
-  background: var(--surface);
+  background: #F7F9FB;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 16px;
@@ -123,8 +123,7 @@ html, body {
   background: #E3F5FF; 
 }
 .kpi-accent-indigo {
-  background: #eaeefb; 
-  border-color: transparent; 
+  background: #E5ECF6; 
 }
 
 [data-theme="dark"] .kpi-accent-blue { 
