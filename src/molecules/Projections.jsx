@@ -23,14 +23,6 @@ const Projections = () => {
     []
   );
 
-  const yMax = useMemo(() => {
-    const max = Math.max(
-      ...mockData.monthly.map((d) => Math.max(d.revenue, d.projection))
-    );
-    const up = Math.ceil(max / 10_000_000) * 10_000_000;
-    return Math.max(30_000_000, up);
-  }, []);
-
   return (
     <section className="proj-card">
       <h3 className="proj-title">Projections vs Actuals</h3>
@@ -71,17 +63,12 @@ const Projections = () => {
                 return [value, key];
               }}
             />
-            <Bar
-              dataKey="actual"
-              stackId="a"
-              fill="var(--bar-actual)"
-              radius={[0, 0, 8, 8]}
-            />
+            <Bar dataKey="actual" stackId="a" fill="var(--bar-actual)" />
             <Bar
               dataKey="cap"
               stackId="a"
               fill="var(--bar-proj)"
-              radius={[8, 8, 0, 0]}
+              radius={[4, 4, 0, 0]}
             />
           </BarChart>
         </ResponsiveContainer>
