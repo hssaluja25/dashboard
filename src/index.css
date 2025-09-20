@@ -423,6 +423,9 @@ html, body {
   border-radius: 12px;
   background: var(--accent-subtle);
 }
+[data-theme="dark"] .notif-icon img { 
+  filter: brightness(0) invert(1); 
+}
 
 .notif-text { 
   min-width: 0; 
