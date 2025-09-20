@@ -41,7 +41,9 @@ const Dashboard = () => {
               <Projections />
             </div>
           </div>
-          <RevenueChart />
+          <div style={{ marginTop: 28 }}>
+            <RevenueChart />
+          </div>
         </section>
       </main>
 
