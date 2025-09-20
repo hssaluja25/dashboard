@@ -37,7 +37,11 @@ const Projections = () => {
       <div style={{ width: "100%", height: 360 }}>
         <ResponsiveContainer>
           <BarChart data={chartData} barCategoryGap={24}>
-            <CartesianGrid vertical={false} stroke="var(--border)" strokeOpacity={0.6} />
+            <CartesianGrid
+              vertical={false}
+              stroke="var(--border)"
+              strokeOpacity={0.6}
+            />
             <XAxis
               dataKey="name"
               tick={{ fill: "var(--text-muted)", fontSize: 14 }}
@@ -61,12 +65,23 @@ const Projections = () => {
               labelStyle={{ color: "var(--text)", fontWeight: 700 }}
               formatter={(value, key) => {
                 if (key === "actual") return [formatMillions(value), "Actual"];
-                if (key === "cap") return [formatMillions(value + 0), "Projection Top-Up"];
+                if (key === "cap")
+                  return [formatMillions(value + 0), "Projection Top-Up"];
                 return [value, key];
               }}
             />
-            <Bar dataKey="actual" stackId="a" fill="var(--bar-actual)" radius={[0, 0, 8, 8]} />
-            <Bar dataKey="cap" stackId="a" fill="var(--bar-proj)" radius={[8, 8, 0, 0]} />
+            <Bar
+              dataKey="actual"
+              stackId="a"
+              fill="var(--bar-actual)"
+              radius={[0, 0, 8, 8]}
+            />
+            <Bar
+              dataKey="cap"
+              stackId="a"
+              fill="var(--bar-proj)"
+              radius={[8, 8, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>
