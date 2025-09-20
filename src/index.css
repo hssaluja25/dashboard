@@ -54,10 +54,10 @@ body {
 }
 
 .loc-title {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 20px;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -75,8 +75,8 @@ body {
 
 .loc-dot {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 8px;
+  height: 8px;
   border-radius: 9999px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
@@ -88,8 +88,8 @@ body {
 }
 
 .loc-dot__inner {
-  width: 12px;
-  height: 12px;
+  width: 4px;
+  height: 4px;
   background: #111;
   border-radius: 9999px;
 }
@@ -231,6 +231,25 @@ body {
 @media (min-width: 1024px) {
   .dashboard-split {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.dashboard-row .row-col {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-row.charts-row {
+    grid-template-columns: 75% 23%;
+    column-gap: 2%;
+    align-items: start;
   }
 }
 
