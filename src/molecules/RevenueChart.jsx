@@ -103,7 +103,6 @@ const RevenueChart = () => {
                 }}
               />
 
-              {/* Soft fill under the actual line */}
               <Area
                 type="natural"
                 dataKey="actual"
@@ -113,12 +112,11 @@ const RevenueChart = () => {
                 isAnimationActive={true}
               />
 
-              {/* Blue projection curve */}
               <Line
                 type="natural"
                 dataKey="projection"
                 stroke="var(--line-proj)"
-                strokeWidth={6}
+                strokeWidth={3}
                 dot={false}
                 activeDot={false}
                 strokeLinecap="round"
@@ -127,12 +125,11 @@ const RevenueChart = () => {
                 animationEasing="ease-out"
               />
 
-              {/* Solid actual to cutoff */}
               <Line
                 type="natural"
                 dataKey="actual"
                 stroke="var(--text)"
-                strokeWidth={6}
+                strokeWidth={3}
                 dot={false}
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -140,12 +137,11 @@ const RevenueChart = () => {
                 animationEasing="ease-out"
               />
 
-              {/* Dashed continuation */}
               <Line
                 type="natural"
                 dataKey="actualFuture"
                 stroke="var(--text)"
-                strokeWidth={6}
+                strokeWidth={3}
                 strokeDasharray="6 8"
                 dot={false}
                 isAnimationActive={false}
