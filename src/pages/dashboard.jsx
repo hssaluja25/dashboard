@@ -4,7 +4,7 @@ import RightSidebar from "../molecules/RightSidebar";
 import Header from "../molecules/Header";
 
 const Dashboard = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
     <div className="dashboard">

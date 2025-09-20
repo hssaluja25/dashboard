@@ -25,6 +25,7 @@ html, body {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
+  padding-left: 26px;
   border-bottom: 1px solid #e5e7eb;
   background: #ffffff;
 }
@@ -41,6 +42,85 @@ html, body {
 
 .dashboard-content {
   padding: 1rem;
+}
+
+.hdr-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icon-btn .icon { 
+  width: 20px; 
+  height: 20px; 
+  display: block; 
+}
+
+.hdr-breadcrumb { 
+  display: flex; 
+  align-items: baseline; 
+  gap: 8px; 
+  font-size: 14px; 
+  line-height: 20px; 
+  color: #1C1C1C66;
+  font-weight: 400;
+}
+.hdr-breadcrumb .muted { 
+  color: #9ca3af; 
+  font-weight: 500; 
+}
+.hdr-breadcrumb .sep { 
+  color: #d1d5db; 
+}
+
+.hdr-breadcrumb .current { 
+  color: #1C1C1C; 
+  font-weight: 400; 
+}
+
+.hdr-search {
+  margin-left: auto;
+  width: 160px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.hdr-search .search-icon { 
+  width: 16px; 
+  height: 16px; 
+  display: block; 
+}
+.hdr-search input {
+  border: 0;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+}
+.hdr-search .kbd-hint { 
+  color: #9ca3af; 
+  font-size: 12px; 
+}
+
+.hdr-actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  margin-left: 12px;
 }
 
 .left-sidebar {
