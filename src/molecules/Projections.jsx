@@ -26,7 +26,7 @@ const Projections = () => {
   return (
     <section className="proj-card">
       <h3 className="proj-title">Projections vs Actuals</h3>
-      <div style={{ width: "100%", height: 168 }}>
+      <div style={{ width: "100%", height: 168, marginLeft: -25 }}>
         <ResponsiveContainer>
           <BarChart data={chartData} barCategoryGap={24}>
             <CartesianGrid
