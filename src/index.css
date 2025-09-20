@@ -89,6 +89,11 @@ html, body {
   display: block; 
 }
 
+[data-theme="dark"] .dashboard-header .icon,
+[data-theme="dark"] .dashboard-header .search-icon {
+  filter: brightness(0) invert(1);
+}
+
 .hdr-breadcrumb { 
   display: flex; 
   align-items: baseline; 
