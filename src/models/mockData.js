@@ -108,7 +108,7 @@ export const mockData = {
       orderId: "CM9801",
       user: {
         name: "Natali Craig",
-        avatarUrl: "https://example.com/avatars/natalicraig.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Landing Page",
       address: "Meadow Lane Oakland",
@@ -119,7 +119,7 @@ export const mockData = {
       orderId: "CM9802",
       user: {
         name: "Kate Morrison",
-        avatarUrl: "https://example.com/avatars/katemorrison.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "CRM Admin pages",
       address: "Larry San Francisco",
@@ -130,7 +130,7 @@ export const mockData = {
       orderId: "CM9803",
       user: {
         name: "Drew Cano",
-        avatarUrl: "https://example.com/avatars/drewcano.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Client Project",
       address: "Bagwell Avenue Ocala",
@@ -141,7 +141,7 @@ export const mockData = {
       orderId: "CM9804",
       user: {
         name: "Orlando Diggs",
-        avatarUrl: "https://example.com/avatars/orlandodiggs.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Admin Dashboard",
       address: "Washburn Baton Rouge",
@@ -152,7 +152,7 @@ export const mockData = {
       orderId: "CM9805",
       user: {
         name: "Andi Lane",
-        avatarUrl: "https://example.com/avatars/andilane.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "App Landing Page",
       address: "Nest Lane Olivette",
@@ -163,7 +163,7 @@ export const mockData = {
       orderId: "CM9806",
       user: {
         name: "Jesse Smith",
-        avatarUrl: "https://example.com/avatars/jessesmith.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "E-commerce Website",
       address: "123 Main St, Anytown",
@@ -174,7 +174,7 @@ export const mockData = {
       orderId: "CM9807",
       user: {
         name: "Taylor Jones",
-        avatarUrl: "https://example.com/avatars/taylorjones.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Blog Content",
       address: "456 Oak Ave, Somewhere",
@@ -185,7 +185,7 @@ export const mockData = {
       orderId: "CM9808",
       user: {
         name: "Alex Miller",
-        avatarUrl: "https://example.com/avatars/alexmiller.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Mobile App UI/UX",
       address: "789 Pine Ln, Nowhere",
@@ -196,7 +196,7 @@ export const mockData = {
       orderId: "CM9809",
       user: {
         name: "Chris Davis",
-        avatarUrl: "https://example.com/avatars/chrisdavis.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Logo Design",
       address: "101 Maple Rd, Aplace",
@@ -207,7 +207,7 @@ export const mockData = {
       orderId: "CM9810",
       user: {
         name: "Morgan Wilson",
-        avatarUrl: "https://example.com/avatars/morganwilson.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Product Photography",
       address: "202 Birch Blvd, Btown",
@@ -218,7 +218,7 @@ export const mockData = {
       orderId: "CM9811",
       user: {
         name: "Jordan Brown",
-        avatarUrl: "https://example.com/avatars/jordanbrown.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Social Media Campaign",
       address: "303 Cedar Dr, Cville",
@@ -229,7 +229,7 @@ export const mockData = {
       orderId: "CM9812",
       user: {
         name: "Casey White",
-        avatarUrl: "https://example.com/avatars/caseywhite.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "SaaS Platform Development",
       address: "404 Elm St, Dcity",
@@ -240,7 +240,7 @@ export const mockData = {
       orderId: "CM9813",
       user: {
         name: "Drew Evans",
-        avatarUrl: "https://example.com/avatars/drewevans.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Data Analytics Report",
       address: "505 Fir Ave, Eburg",
@@ -251,7 +251,7 @@ export const mockData = {
       orderId: "CM9814",
       user: {
         name: "Jamie Lee",
-        avatarUrl: "https://example.com/avatars/jamielee.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Video Production",
       address: "606 Spruce Rd, Ftown",
@@ -262,7 +262,7 @@ export const mockData = {
       orderId: "CM9815",
       user: {
         name: "Pat Green",
-        avatarUrl: "https://example.com/avatars/patgreen.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Market Research",
       address: "707 Hemlock Dr, Gburg",
@@ -273,7 +273,7 @@ export const mockData = {
       orderId: "CM9816",
       user: {
         name: "Ryan Scott",
-        avatarUrl: "https://example.com/avatars/ryanscott.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "SEO Optimization",
       address: "808 Aspen St, Htown",
@@ -284,7 +284,7 @@ export const mockData = {
       orderId: "CM9817",
       user: {
         name: "Cameron Ross",
-        avatarUrl: "https://example.com/avatars/cameronross.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Content Strategy",
       address: "909 Larch Ln, Icity",
@@ -295,7 +295,7 @@ export const mockData = {
       orderId: "CM9818",
       user: {
         name: "Dylan Baker",
-        avatarUrl: "https://example.com/avatars/dylanbaker.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Email Marketing",
       address: "111 Poplar Rd, Jville",
@@ -306,7 +306,7 @@ export const mockData = {
       orderId: "CM9819",
       user: {
         name: "Hayden King",
-        avatarUrl: "https://example.com/avatars/haydenking.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Corporate Branding",
       address: "222 Willow Dr, Ktown",
@@ -317,7 +317,7 @@ export const mockData = {
       orderId: "CM9820",
       user: {
         name: "Jesse Cooper",
-        avatarUrl: "https://example.com/avatars/jessecooper.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Webinar Production",
       address: "333 Sycamore St, Lville",
@@ -328,7 +328,7 @@ export const mockData = {
       orderId: "CM9821",
       user: {
         name: "Jordan Foster",
-        avatarUrl: "https://example.com/avatars/jordanfoster.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Online Course Creation",
       address: "444 Cherry Ave, Mtown",
@@ -339,7 +339,7 @@ export const mockData = {
       orderId: "CM9822",
       user: {
         name: "Quinn Carter",
-        avatarUrl: "https://example.com/avatars/quinncarter.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Podcast Editing",
       address: "555 Walnut Ln, Ncity",
@@ -350,7 +350,7 @@ export const mockData = {
       orderId: "CM9823",
       user: {
         name: "Robin Hughes",
-        avatarUrl: "https://example.com/avatars/robinhughes.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Brochure Design",
       address: "666 Chestnut Rd, Oville",
@@ -361,7 +361,7 @@ export const mockData = {
       orderId: "CM9824",
       user: {
         name: "Samira Turner",
-        avatarUrl: "https://example.com/avatars/samiraturner.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Infographic Creation",
       address: "777 Hickory Dr, Ptown",
@@ -372,7 +372,7 @@ export const mockData = {
       orderId: "CM9825",
       user: {
         name: "Terry Adams",
-        avatarUrl: "https://example.com/avatars/terryadams.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Business Card Design",
       address: "888 Ash St, Qcity",
@@ -383,7 +383,7 @@ export const mockData = {
       orderId: "CM9826",
       user: {
         name: "Tony Lewis",
-        avatarUrl: "https://example.com/avatars/tonylewis.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Press Release Writing",
       address: "999 Pine Ln, Rville",
@@ -394,7 +394,7 @@ export const mockData = {
       orderId: "CM9827",
       user: {
         name: "Valerie Clark",
-        avatarUrl: "https://example.com/avatars/valerieclark.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Annual Report Layout",
       address: "123 Juniper Rd, Stown",
@@ -405,7 +405,7 @@ export const mockData = {
       orderId: "CM9828",
       user: {
         name: "Will Evans",
-        avatarUrl: "https://example.com/avatars/willevans.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Newsletter Design",
       address: "456 Magnolia Dr, Tcity",
@@ -416,7 +416,7 @@ export const mockData = {
       orderId: "CM9829",
       user: {
         name: "Xavier Hall",
-        avatarUrl: "https://example.com/avatars/xavierhall.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Digital Ad Campaign",
       address: "789 Redwood St, Uville",
@@ -427,7 +427,7 @@ export const mockData = {
       orderId: "CM9830",
       user: {
         name: "Yasmine Green",
-        avatarUrl: "https://example.com/avatars/yasminegreen.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Customer Survey",
       address: "101 Sequoia Ave, Vtown",
@@ -438,7 +438,7 @@ export const mockData = {
       orderId: "CM9831",
       user: {
         name: "Zane Harris",
-        avatarUrl: "https://example.com/avatars/zaneharris.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "User Onboarding Flow",
       address: "202 Birch Blvd, Wcity",
@@ -449,7 +449,7 @@ export const mockData = {
       orderId: "CM9832",
       user: {
         name: "Ava King",
-        avatarUrl: "https://example.com/avatars/avaking.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "App Store Optimization",
       address: "303 Cherry Dr, Xville",
@@ -460,7 +460,7 @@ export const mockData = {
       orderId: "CM9833",
       user: {
         name: "Benjamin Lewis",
-        avatarUrl: "https://example.com/avatars/benjaminlewis.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Case Study Writing",
       address: "404 Elm St, Ytown",
@@ -471,7 +471,7 @@ export const mockData = {
       orderId: "CM9834",
       user: {
         name: "Chloe Moore",
-        avatarUrl: "https://example.com/avatars/chloemoore.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "White Paper Design",
       address: "505 Fir Ave, Zcity",
@@ -482,7 +482,7 @@ export const mockData = {
       orderId: "CM9835",
       user: {
         name: "Daniel Nelson",
-        avatarUrl: "https://example.com/avatars/danielnelson.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Press Kit Creation",
       address: "606 Spruce Rd, Aville",
@@ -493,7 +493,7 @@ export const mockData = {
       orderId: "CM9836",
       user: {
         name: "Ella O'Connor",
-        avatarUrl: "https://example.com/avatars/ellaoconnor.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Website Re-design",
       address: "707 Hemlock Dr, Btown",
@@ -504,7 +504,7 @@ export const mockData = {
       orderId: "CM9837",
       user: {
         name: "Finn Parker",
-        avatarUrl: "https://example.com/avatars/finnparker.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Mobile Game Development",
       address: "808 Aspen St, Ccity",
@@ -515,7 +515,7 @@ export const mockData = {
       orderId: "CM9838",
       user: {
         name: "Grace Quinn",
-        avatarUrl: "https://example.com/avatars/gracequinn.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "AI Integration",
       address: "909 Larch Ln, Dville",
@@ -526,7 +526,7 @@ export const mockData = {
       orderId: "CM9839",
       user: {
         name: "Henry Roberts",
-        avatarUrl: "https://example.com/avatars/henryroberts.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Blockchain Solution",
       address: "111 Poplar Rd, Etown",
@@ -537,7 +537,7 @@ export const mockData = {
       orderId: "CM9840",
       user: {
         name: "Isla Scott",
-        avatarUrl: "https://example.com/avatars/islascott.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "IoT Device Prototype",
       address: "222 Willow Dr, Fcity",
@@ -548,7 +548,7 @@ export const mockData = {
       orderId: "CM9841",
       user: {
         name: "Jack Turner",
-        avatarUrl: "https://example.com/avatars/jackturner.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Virtual Reality Experience",
       address: "333 Sycamore St, Gville",
@@ -559,7 +559,7 @@ export const mockData = {
       orderId: "CM9842",
       user: {
         name: "Kara Underwood",
-        avatarUrl: "https://example.com/avatars/karaunderwood.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Augmented Reality App",
       address: "444 Cherry Ave, Htown",
@@ -570,7 +570,7 @@ export const mockData = {
       orderId: "CM9843",
       user: {
         name: "Leo Vance",
-        avatarUrl: "https://example.com/avatars/leovance.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Smart Home Integration",
       address: "555 Walnut Ln, Icity",
@@ -581,7 +581,7 @@ export const mockData = {
       orderId: "CM9844",
       user: {
         name: "Mia Walker",
-        avatarUrl: "https://example.com/avatars/miawalker.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Wearable Tech Development",
       address: "666 Chestnut Rd, Jville",
@@ -592,7 +592,7 @@ export const mockData = {
       orderId: "CM9845",
       user: {
         name: "Noah Yang",
-        avatarUrl: "https://example.com/avatars/noahyang.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Drone Software",
       address: "777 Hickory Dr, Ktown",
@@ -603,7 +603,7 @@ export const mockData = {
       orderId: "CM9846",
       user: {
         name: "Olivia Zimmerman",
-        avatarUrl: "https://example.com/avatars/oliviazimmerman.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "3D Printing Service",
       address: "888 Ash St, Lcity",
@@ -614,7 +614,7 @@ export const mockData = {
       orderId: "CM9847",
       user: {
         name: "Peter Adams",
-        avatarUrl: "https://example.com/avatars/peteradams.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Robotics Engineering",
       address: "999 Pine Ln, Mville",
@@ -625,7 +625,7 @@ export const mockData = {
       orderId: "CM9848",
       user: {
         name: "Quinn Brooks",
-        avatarUrl: "https://example.com/avatars/quinnbrooks.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Biometric Security System",
       address: "123 Juniper Rd, Ntown",
@@ -636,7 +636,7 @@ export const mockData = {
       orderId: "CM9849",
       user: {
         name: "Rachel Carter",
-        avatarUrl: "https://example.com/avatars/rachelcarter.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Quantum Computing Research",
       address: "456 Magnolia Dr, Ocity",
@@ -647,7 +647,7 @@ export const mockData = {
       orderId: "CM9850",
       user: {
         name: "Samuel Davis",
-        avatarUrl: "https://example.com/avatars/samueldavis.jpg",
+        avatarUrl: "https://avatar.iran.liara.run/public",
       },
       project: "Cybersecurity Audit",
       address: "789 Redwood St, Pville",
