@@ -178,6 +178,75 @@ body {
   width: var(--w);
 }
 
+.tsp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.tsp-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.tsp-table {
+  width: 100%;
+}
+
+.tsp-row {
+  display: grid;
+  grid-template-columns: 1fr 140px 120px 160px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.tsp-head {
+  color: var(--text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+.tsp-tbody .tsp-row {
+  border-bottom: 1px solid transparent;
+}
+
+.tsp-td,
+.tsp-th {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.tsp-th {
+  color: var(--text-muted);
+}
+
+.tsp-body {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.tsp-body.is-in {
+  animation: tsp-in 420ms cubic-bezier(.2, .8, .2, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes tsp-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .dashboard {
   display: flex;
   min-height: 100vh;
