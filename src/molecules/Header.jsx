@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SidebarIcon from "@/assets/Sidebar.svg";
 import StarIcon from "@/assets/Star.svg";
 import SearchIcon from "@/assets/Search.svg";
@@ -7,6 +7,27 @@ import ClockIcon from "@/assets/ClockCounterClockwise.svg";
 import BellIcon from "@/assets/Bell.svg";
 
 const Header = ({ setSidebarOpen, setRightSidebarOpen }) => {
+  const searchRef = useRef(null);
+
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      // Don't capture the keyboard shortcut when focused in some interactive element
+      const target = e.target;
+      const isEditable = ["INPUT", "TEXTAREA", "SELECT"].includes(
+        target.tagName
+      );
+      if (isEditable) return;
+
+      if (e.metaKey && (e.key === "/" || e.code === "Slash")) {
+        e.preventDefault();
+        searchRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   return (
     <header className="dashboard-header">
       <div className="hdr-left">
@@ -30,7 +51,7 @@ const Header = ({ setSidebarOpen, setRightSidebarOpen }) => {
 
       <div className="hdr-search">
         <img src={SearchIcon} alt="" className="search-icon" />
-        <input type="text" placeholder="Search" />
+        <input ref={searchRef} type="text" placeholder="Search" />
         <span className="kbd-hint">⌘/</span>
       </div>
 
