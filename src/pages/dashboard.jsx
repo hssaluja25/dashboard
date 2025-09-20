@@ -5,6 +5,7 @@ import Header from "../molecules/Header";
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [rightSidebarOpen, setRightSidebarOpen] = useState(true);
 
   return (
     <div className="dashboard">
@@ -22,14 +23,17 @@ const Dashboard = () => {
 
       {/* Main content */}
       <main className="dashboard-main">
-        <Header setSidebarOpen={setSidebarOpen} />
+        <Header
+          setSidebarOpen={setSidebarOpen}
+          setRightSidebarOpen={setRightSidebarOpen}
+        />
 
         <section className="dashboard-content">
           <p>dashboard</p>
         </section>
       </main>
 
-      <RightSidebar />
+      {rightSidebarOpen && <RightSidebar />}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import SunIcon from "@/assets/Sun.svg";
 import ClockIcon from "@/assets/ClockCounterClockwise.svg";
 import BellIcon from "@/assets/Bell.svg";
 
-const Header = ({ setSidebarOpen }) => {
+const Header = ({ setSidebarOpen, setRightSidebarOpen }) => {
   return (
     <header className="dashboard-header">
       <div className="hdr-left">
@@ -44,7 +44,10 @@ const Header = ({ setSidebarOpen }) => {
         <button className="icon-btn">
           <img src={BellIcon} alt="" className="icon" />
         </button>
-        <button className="icon-btn">
+        <button
+          className="icon-btn"
+          onClick={() => setRightSidebarOpen((prev) => !prev)}
+        >
           <img src={SidebarIcon} alt="" className="icon" />
         </button>
       </div>
