@@ -76,6 +76,7 @@ const RevenueChart = () => {
                 tick={{ fill: "var(--text-muted)", fontSize: 12 }}
                 tickLine={false}
                 axisLine={{ stroke: "var(--border)" }}
+                padding={{ left: 36 }}
               />
               <YAxis
                 domain={[0, 30000000]}
