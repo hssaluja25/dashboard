@@ -21,14 +21,14 @@ const DonutChart = () => {
       <div>
         <div className="donut-chart">
           <ResponsiveContainer>
-            <PieChart>
+            <PieChart margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
               <Pie
                 data={data}
                 dataKey="amount"
                 nameKey="channel"
-                innerRadius={55}
-                outerRadius={80}
-                strokeWidth={8}
+                innerRadius={36}
+                outerRadius={54}
+                strokeWidth={6}
                 stroke="var(--surface)"
                 paddingAngle={3}
                 startAngle={90}
