@@ -214,6 +214,11 @@ body {
   border-bottom: 1px solid transparent;
 }
 
+.tsp-tbody .tsp-row:hover {
+  background: var(--surface-subtle);
+  border-radius: 8px;
+}
+
 .tsp-td,
 .tsp-th {
   color: var(--text);
