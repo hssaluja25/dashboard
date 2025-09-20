@@ -73,11 +73,26 @@ body {
   padding: 1rem;
 }
 
+.dashboard-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.dashboard-split .split-col {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .proj-card {
   background: var(--surface);
   border-radius: 16px;
   border: 1px solid var(--border);
-  margin-top: 16px;
   padding: 16px;
   position: relative;
 }
@@ -263,14 +278,14 @@ body {
 .kpis-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 28px;
 }
 
 .kpi-card {
   background: #F7F9FB;
   cursor: pointer;
   border-radius: 16px;
-  padding: 16px;
+  padding: 24px;
   transition: background-color 150ms ease, box-shadow 180ms ease,
     transform 180ms ease, border-color 150ms ease;
 }
@@ -800,4 +815,12 @@ body {
   font-weight: 400;
   line-height: 20px;
   color: var(--text);
+}
+
+.dashboard-content>p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }

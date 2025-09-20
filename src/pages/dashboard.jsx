@@ -32,8 +32,14 @@ const Dashboard = () => {
 
         <section className="dashboard-content">
           <p>eCommerce</p>
-          <Kpis />
-          <Projections />
+          <div className="dashboard-split">
+            <div className="split-col">
+              <Kpis />
+            </div>
+            <div className="split-col">
+              <Projections />
+            </div>
+          </div>
         </section>
       </main>
 
