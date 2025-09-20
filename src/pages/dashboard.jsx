@@ -3,6 +3,7 @@ import LeftSidebar from "../molecules/LeftSidebar";
 import RightSidebar from "../molecules/RightSidebar";
 import Header from "../molecules/Header";
 import Kpis from "../molecules/Kpis";
+import Projections from "../molecules/Projections";
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -32,6 +33,7 @@ const Dashboard = () => {
         <section className="dashboard-content">
           <p>eCommerce</p>
           <Kpis />
+          <Projections />
         </section>
       </main>
 
