@@ -73,16 +73,17 @@ const RevenueChart = () => {
               />
               <XAxis
                 dataKey="name"
-                tick={{ fill: "var(--text-muted)", fontSize: 16 }}
+                tick={{ fill: "var(--text-muted)", fontSize: 12 }}
                 tickLine={false}
                 axisLine={{ stroke: "var(--border)" }}
               />
               <YAxis
-                domain={[0, 30_000_000]}
-                ticks={[0, 10_000_000, 20_000_000, 30_000_000]}
+                domain={[0, 30000000]}
+                ticks={[0, 10000000, 20000000, 30000000]}
                 tickFormatter={formatMillions}
-                tick={{ fill: "var(--text-muted)", fontSize: 16 }}
-                axisLine={{ stroke: "var(--border)" }}
+                tick={{ fill: "var(--text-muted)", fontSize: 12 }}
+                axisLine={false}
+                tickLine={false}
               />
               <Tooltip
                 cursor={{ stroke: "var(--border)", strokeDasharray: "3 3" }}
