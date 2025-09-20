@@ -1,12 +1,15 @@
 import React from "react";
+import ArrowRise from "@/assets/ArrowRise.svg";
+import ArrowFall from "@/assets/ArrowFall.svg";
 
 const Arrow = ({ value }) => {
   const positive = value >= 0;
   const pct = Math.abs(value).toFixed(2) + "%";
-  const arrow = positive ? "↗" : "↘";
+  const Icon = positive ? ArrowRise : ArrowFall;
   return (
     <span className={`kpi-change ${positive ? "is-positive" : "is-negative"}`}>
-      {(positive ? "+" : "-") + pct} {arrow}
+      {(positive ? "+" : "-") + pct}
+      <img className="kpi-arrow" src={Icon} alt="" width={14} height={14} />
     </span>
   );
 };

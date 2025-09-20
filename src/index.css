@@ -105,6 +105,9 @@ html, body {
 .kpi-change {
   font-size: 14px;
   line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 .kpi-change.is-positive { 
   color: #10b981; 
@@ -112,10 +115,12 @@ html, body {
 .kpi-change.is-negative { 
   color: #ef4444; 
 }
+[data-theme="dark"] .kpi-arrow { 
+  filter: brightness(0) invert(1); 
+}
 
 .kpi-accent-blue { 
-  background: #eaf6ff; 
-  border-color: transparent; 
+  background: #E3F5FF; 
 }
 .kpi-accent-indigo {
   background: #eaeefb; 
