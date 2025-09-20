@@ -52,8 +52,14 @@ const Dashboard = () => {
               <RevenueByLocation />
             </div>
           </div>
-          <TopSellingProducts />
-          <DonutChart />
+          <div className="dashboard-row charts-row">
+            <div className="row-col">
+              <TopSellingProducts />
+            </div>
+            <div className="row-col">
+              <DonutChart />
+            </div>
+          </div>
         </section>
       </main>
 
