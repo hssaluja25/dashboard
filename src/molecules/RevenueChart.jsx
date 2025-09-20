@@ -33,9 +33,24 @@ const RevenueChart = () => {
 
   return (
     <section className="proj-card">
-      <h3 className="proj-title">Revenue</h3>
+      <div className="proj-title">
+        <span className="proj-h">Revenue</span>
+        <span className="title-sep" aria-hidden="true" />
+        <span className="title-item">
+          <span className="title-dot dot-actual" />
+          <span>
+            Current Week <strong>$58,211</strong>
+          </span>
+        </span>
+        <span className="title-item">
+          <span className="title-dot dot-proj" />
+          <span>
+            Previous Week <strong>$68,768</strong>
+          </span>
+        </span>
+      </div>
       <section className="rev-card">
-        <div style={{ width: "100%", height: 320 }}>
+        <div style={{ width: "100%", height: 230 }}>
           <ResponsiveContainer>
             <LineChart
               data={data}

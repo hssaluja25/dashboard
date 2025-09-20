@@ -110,7 +110,43 @@ body {
   line-height: 20px;
   color: #1C1C1C;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 16px;
+}
+
+.proj-title .title-sep {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+}
+
+.proj-title .title-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.proj-title .title-item strong {
+  font-weight: 700;
+}
+
+.proj-title .title-dot {
+  width: 6px;
+  height: 6px;
+  margin-left: 9px;
+  border-radius: 9999px;
+  background: var(--text);
+  display: inline-block;
+}
+
+.proj-title .title-dot.dot-proj {
+  background: var(--line-proj);
 }
 
 .proj-plot {
