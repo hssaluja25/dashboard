@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LeftSidebar from "../molecules/LeftSidebar";
+import RightSidebar from "../molecules/RightSidebar";
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -32,6 +33,8 @@ const Dashboard = () => {
           <p>dashboard</p>
         </section>
       </main>
+
+      <RightSidebar />
     </div>
   );
 };
