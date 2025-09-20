@@ -49,7 +49,8 @@ const Projections = () => {
               axisLine={{ stroke: "var(--border)" }}
             />
             <YAxis
-              domain={[0, yMax]}
+              domain={[0, 30000000]}
+              ticks={[0, 10000000, 20000000, 30000000]}
               tickFormatter={formatMillions}
               tick={{ fill: "var(--text-muted)", fontSize: 12 }}
               axisLine={{ stroke: "var(--border)" }}
