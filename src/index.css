@@ -386,6 +386,18 @@ body {
   height: 16px;
 }
 
+.ot-body-row .ot-check input {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.ot-body-row:hover .ot-check input,
+.ot-body-row.is-selected .ot-check input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .ot-user {
   display: flex;
   align-items: center;
