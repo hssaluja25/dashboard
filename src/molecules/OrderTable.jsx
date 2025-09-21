@@ -9,6 +9,10 @@ import Contact3 from "@/assets/Contact3.svg";
 import Contact4 from "@/assets/Contact4.svg";
 import Contact5 from "@/assets/Contact5.svg";
 import Contact6 from "@/assets/Contact6.svg";
+import AddIcon from "@/assets/Add.svg";
+import FilterIcon from "@/assets/Filter.svg";
+import SortIcon from "@/assets/Sort.svg";
+import SearchIcon from "@/assets/Search.svg";
 
 const PAGE_SIZE = 10;
 
@@ -70,6 +74,24 @@ const OrderTable = () => {
 
   return (
     <section className="orders-card">
+      <div className="ot-toolbar">
+        <div className="ot-tools">
+          <button type="button" className="ot-icon-btn" aria-label="Add">
+            <img src={AddIcon} alt="" width={16} height={16} />
+          </button>
+          <button type="button" className="ot-icon-btn" aria-label="Filter">
+            <img src={FilterIcon} alt="" width={16} height={16} />
+          </button>
+          <button type="button" className="ot-icon-btn" aria-label="Sort">
+            <img src={SortIcon} alt="" width={16} height={16} />
+          </button>
+        </div>
+        <div className="ot-search">
+          <img src={SearchIcon} alt="" width={16} height={16} />
+          <input type="text" placeholder="Search" aria-label="Search orders" />
+        </div>
+      </div>
+
       <div className="ot-table">
         <div className="ot-row ot-head">
           <div className="ot-cell ot-check">
