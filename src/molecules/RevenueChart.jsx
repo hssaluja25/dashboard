@@ -35,7 +35,7 @@ const RevenueChart = () => {
     <section className="proj-card">
       <div className="proj-title">
         <span className="proj-h">Revenue</span>
-        <span className="title-sep" aria-hidden="true" />
+        <span className="title-sep" />
         <span className="title-item">
           <span className="title-dot dot-actual" />
           <span>

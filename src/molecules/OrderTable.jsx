@@ -1,17 +1,21 @@
 import React, { useMemo, useState } from "react";
 import { mockData } from "@/models/mockData";
+import CalendarIcon from "@/assets/Calendar.svg";
 
 const PAGE_SIZE = 10;
 
+const getStatusColor = (status) => {
+  return status === "Complete"
+    ? "#4AA785"
+    : status === "Approved"
+    ? "#FFC555"
+    : status === "Rejected"
+    ? "#1C1C1C66"
+    : "#8A8CD9";
+};
+
 const StatusDot = ({ status }) => {
-  const color =
-    status === "Complete"
-      ? "#10b981"
-      : status === "Approved"
-      ? "#f59e0b"
-      : status === "Rejected"
-      ? "#ef4444"
-      : "#60a5fa"; // In Progress/Pending
+  const color = getStatusColor(status);
   return <span className="ot-status" style={{ background: color }} />;
 };
 
@@ -50,8 +54,8 @@ const OrderTable = () => {
     <section className="orders-card">
       <h3 className="orders-title">Orders</h3>
 
-      <div className="ot-table" role="table">
-        <div className="ot-row ot-head" role="row">
+      <div className="ot-table">
+        <div className="ot-row ot-head">
           <div className="ot-cell ot-check">
             <input type="checkbox" checked={allChecked} onChange={toggleAll} />
           </div>
@@ -63,14 +67,15 @@ const OrderTable = () => {
           <div className="ot-cell">Status</div>
         </div>
 
-        <div className="ot-body" role="rowgroup">
+        <div className="ot-body">
           {slice.map((r) => {
             const isChecked = selected.has(r.orderId);
             return (
               <label
                 key={r.orderId}
-                className={`ot-row ot-body-row ${isChecked ? "is-selected" : ""}`}
-                role="row"
+                className={`ot-row ot-body-row ${
+                  isChecked ? "is-selected" : ""
+                }`}
               >
                 <div className="ot-cell ot-check">
                   <input
@@ -82,16 +87,23 @@ const OrderTable = () => {
                 </div>
                 <div className="ot-cell ot-id">#{r.orderId}</div>
                 <div className="ot-cell ot-user">
-                  {/* avatar could be an img if available */}
-                  <span className="ot-avatar" aria-hidden="true" />
+                  <span className="ot-avatar" />
                   <span>{r.user?.name}</span>
                 </div>
                 <div className="ot-cell">{r.project}</div>
                 <div className="ot-cell">{r.address}</div>
-                <div className="ot-cell">{r.date}</div>
+                <div
+                  className="ot-cell date"
+                  style={{ display: "flex", alignItems: "center", gap: "5px" }}
+                >
+                  <img width={12} src={CalendarIcon} alt="" className="icon" />
+                  {r.date}
+                </div>
                 <div className="ot-cell ot-status-cell">
                   <StatusDot status={r.status} />
-                  <span>{r.status}</span>
+                  <span style={{ color: getStatusColor(r.status) }}>
+                    {r.status}
+                  </span>
                 </div>
               </label>
             );

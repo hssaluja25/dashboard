@@ -25,7 +25,7 @@ const RevenueByLocation = () => {
             style={{ left: p.left, top: p.top, "--d": `${i * 90}ms` }}
           >
             <span className="loc-dot__inner" />
-            <span className="loc-tip" role="tooltip">
+            <span className="loc-tip">
               {p.name} — ${Math.round(p.revenue / 1000)}K
             </span>
           </span>
