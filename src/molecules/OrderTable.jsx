@@ -1,6 +1,12 @@
 import React, { useMemo, useState } from "react";
 import { mockData } from "@/models/mockData";
 import CalendarIcon from "@/assets/Calendar.svg";
+import Contact1 from "@/assets/Contact1.svg";
+import Contact2 from "@/assets/Contact2.svg";
+import Contact3 from "@/assets/Contact3.svg";
+import Contact4 from "@/assets/Contact4.svg";
+import Contact5 from "@/assets/Contact5.svg";
+import Contact6 from "@/assets/Contact6.svg";
 
 const PAGE_SIZE = 10;
 
@@ -23,6 +29,14 @@ const OrderTable = () => {
   const rows = useMemo(() => mockData.orders, []);
   const [page, setPage] = useState(1);
   const [selected, setSelected] = useState(() => new Set());
+  const avatars = useMemo(
+    () => [Contact1, Contact2, Contact3, Contact4, Contact5, Contact6],
+    []
+  );
+  const pickAvatar = () => {
+    const randomAvatar = Math.floor(Math.random() * 6);
+    return avatars[randomAvatar];
+  };
 
   const pageCount = Math.ceil(rows.length / PAGE_SIZE);
   const start = (page - 1) * PAGE_SIZE;
@@ -87,7 +101,7 @@ const OrderTable = () => {
                 </div>
                 <div className="ot-cell ot-id">#{r.orderId}</div>
                 <div className="ot-cell ot-user">
-                  <span className="ot-avatar" />
+                  <img className="ot-avatar" src={pickAvatar()} alt="" />
                   <span>{r.user?.name}</span>
                 </div>
                 <div className="ot-cell">{r.project}</div>
