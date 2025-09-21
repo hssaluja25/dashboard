@@ -33,9 +33,11 @@ const OrderTable = () => {
     () => [Contact1, Contact2, Contact3, Contact4, Contact5, Contact6],
     []
   );
-  const pickAvatar = () => {
-    const randomAvatar = Math.floor(Math.random() * 6);
-    return avatars[randomAvatar];
+  const pickAvatar = (key) => {
+    let h = 0;
+    const s = String(key);
+    for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+    return avatars[h % avatars.length];
   };
 
   const pageCount = Math.ceil(rows.length / PAGE_SIZE);
@@ -101,7 +103,11 @@ const OrderTable = () => {
                 </div>
                 <div className="ot-cell ot-id">#{r.orderId}</div>
                 <div className="ot-cell ot-user">
-                  <img className="ot-avatar" src={pickAvatar()} alt="" />
+                  <img
+                    className="ot-avatar"
+                    src={pickAvatar(r.orderId)}
+                    alt=""
+                  />
                   <span>{r.user?.name}</span>
                 </div>
                 <div className="ot-cell">{r.project}</div>

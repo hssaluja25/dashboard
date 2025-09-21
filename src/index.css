@@ -384,7 +384,7 @@ body {
 .ot-check input {
   width: 16px;
   height: 16px;
-  border-radius: 4px;
+  accent-color: black;
 }
 
 .ot-body-row .ot-check input {
