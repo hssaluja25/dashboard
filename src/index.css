@@ -19,6 +19,9 @@ body {
   --hover: #568dc4;
   --active: #f3f4f6;
   --accent-subtle: #eef6ff;
+  --orders-tab: #F7F9FB;
+  --checkbox-bg: #111;
+  --checkbox-tick: #ffffff;
   --bar-actual: #9dbbd2;
   --bar-proj: #cfe1ee;
   --line-proj: #9dbbd2;
@@ -29,12 +32,15 @@ body {
 [data-theme="dark"] {
   --bg: #1C1C1D;
   --surface: #1C1C1D;
+  --checkbox-bg: #C6C6F9;
   --surface-subtle: black --text: white;
   --text-muted: white;
   --border: #334155;
   --ot-cell-text: white;
+  --checkbox-tick: black;
   --ot-cell: white;
   --text: white;
+  --orders-tab: #272626;
   --hover: #0b1220;
   --active: #1f2937;
   --accent-subtle: black;
@@ -363,7 +369,7 @@ body {
   justify-content: space-between;
   padding: 8px 12px;
   border-radius: 12px;
-  background: var(--surface-subtle);
+  background: var(--orders-tab);
   margin-bottom: 12px;
   position: relative;
 }
@@ -477,7 +483,7 @@ body {
 }
 
 .ot-check input:checked {
-  background: #111;
+  background: var(--checkbox-bg);
   border-color: #111;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline points='3,8 6,11 13,4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
