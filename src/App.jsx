@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/dashboard";
 import Orders from "./pages/Orders";
 import LeftSidebar from "./molecules/LeftSidebar";
 import RightSidebar from "./molecules/RightSidebar";
