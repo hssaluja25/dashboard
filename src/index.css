@@ -1281,6 +1281,10 @@ body {
   filter: brightness(0) invert(1);
 }
 
+[data-theme="dark"] :is(.kpi-accent-blue, .kpi-accent-indigo) .kpi-arrow {
+  filter: brightness(1) invert(0);
+}
+
 .db-label {
   font-size: 14px;
   margin-left: 4px;
