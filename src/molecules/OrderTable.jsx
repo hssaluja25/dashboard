@@ -13,25 +13,29 @@ import AddIcon from "@/assets/Add.svg";
 import FilterIcon from "@/assets/Filter.svg";
 import SortIcon from "@/assets/Sort.svg";
 import SearchIcon from "@/assets/Search.svg";
+import { useSelector } from "react-redux";
 
 const PAGE_SIZE = 10;
 
-const getStatusColor = (status) => {
+const getStatusColor = (status, theme = "light") => {
   return status === "Complete"
     ? "#4AA785"
     : status === "Approved"
     ? "#FFC555"
     : status === "Rejected"
-    ? "#1C1C1C66"
+    ? theme === "light"
+      ? "#1C1C1C66"
+      : "#767676"
     : "#8A8CD9";
 };
 
-const StatusDot = ({ status }) => {
-  const color = getStatusColor(status);
+const StatusDot = ({ status, theme }) => {
+  const color = getStatusColor(status, theme);
   return <span className="ot-status" style={{ background: color }} />;
 };
 
 const OrderTable = () => {
+  const theme = useSelector((state) => state.app.theme);
   const rows = useMemo(() => mockData.orders, []);
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
@@ -205,8 +209,8 @@ const OrderTable = () => {
                   {r.date}
                 </div>
                 <div className="ot-cell ot-status-cell">
-                  <StatusDot status={r.status} />
-                  <span style={{ color: getStatusColor(r.status) }}>
+                  <StatusDot status={r.status} theme={theme} />
+                  <span style={{ color: getStatusColor(r.status, theme) }}>
                     {r.status}
                   </span>
                 </div>

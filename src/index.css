@@ -344,7 +344,7 @@ body {
 
 .ol-title {
   font-size: 14px;
-  color: #1C1C1C;
+  color: var(--ot-cell);
   line-height: 20px;
   font-weight: 600;
 }
