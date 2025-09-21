@@ -958,6 +958,10 @@ body {
   background: #E4ECF7;
 }
 
+[data-theme="dark"] .kpi-change {
+  color: white;
+}
+
 [data-theme="dark"] .kpi-accent-blue div,
 [data-theme="dark"] .kpi-accent-blue span {
   color: black;
@@ -966,6 +970,7 @@ body {
 [data-theme="dark"] .kpi-accent-indigo {
   background: #E4ECF7;
 }
+
 
 [data-theme="dark"] .kpi-accent-indigo div,
 [data-theme="dark"] .kpi-accent-indigo span {
