@@ -22,14 +22,19 @@ body {
   --bar-actual: #9dbbd2;
   --bar-proj: #cfe1ee;
   --line-proj: #9dbbd2;
+  --ot-cell-text: #1C1C1C66;
+  --ot-cell: #1C1C1C;
 }
 
 [data-theme="dark"] {
-  --bg: black;
-  --surface: black;
+  --bg: #1C1C1D;
+  --surface: #1C1C1D;
   --surface-subtle: black --text: white;
   --text-muted: white;
   --border: #334155;
+  --ot-cell-text: white;
+  --ot-cell: white;
+  --text: white;
   --hover: #0b1220;
   --active: #1f2937;
   --accent-subtle: black;
@@ -425,7 +430,7 @@ body {
 }
 
 .ot-head .ot-cell {
-  color: #1C1C1C66;
+  color: var(--ot-cell-text);
 }
 
 .ot-body-row {
@@ -438,7 +443,7 @@ body {
 }
 
 .ot-cell {
-  color: #1C1C1C;
+  color: var(--ot-cell);
   font-size: 12px;
   line-height: 18px;
 }
