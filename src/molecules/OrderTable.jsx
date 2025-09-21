@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { mockData } from "@/models/mockData";
 import CalendarIcon from "@/assets/Calendar.svg";
 import ArrowLeft from "@/assets/ArrowLeft.svg";
@@ -34,6 +34,7 @@ const StatusDot = ({ status }) => {
 const OrderTable = () => {
   const rows = useMemo(() => mockData.orders, []);
   const [page, setPage] = useState(1);
+  const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(() => new Set());
   const avatars = useMemo(
     () => [Contact1, Contact2, Contact3, Contact4, Contact5, Contact6],
@@ -46,9 +47,35 @@ const OrderTable = () => {
     return avatars[h % avatars.length];
   };
 
-  const pageCount = Math.ceil(rows.length / PAGE_SIZE);
-  const start = (page - 1) * PAGE_SIZE;
-  const slice = rows.slice(start, start + PAGE_SIZE);
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return rows;
+    return rows.filter((r) => {
+      const blob = [
+        r.orderId,
+        r.user?.name,
+        r.project,
+        r.address,
+        r.date,
+        r.status,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return blob.includes(q);
+    });
+  }, [rows, query]);
+
+  const pageCount = Math.ceil(filtered.length / PAGE_SIZE) || 1;
+  const start = Math.min(
+    (page - 1) * PAGE_SIZE,
+    Math.max(0, (pageCount - 1) * PAGE_SIZE)
+  );
+  const slice = filtered.slice(start, start + PAGE_SIZE);
+
+  useEffect(() => {
+    setPage(1);
+  }, [query]);
 
   const toggle = (id) => {
     setSelected((prev) => {
@@ -76,19 +103,25 @@ const OrderTable = () => {
     <section className="orders-card">
       <div className="ot-toolbar">
         <div className="ot-tools">
-          <button type="button" className="ot-icon-btn" aria-label="Add">
+          <button type="button" className="ot-icon-btn">
             <img src={AddIcon} alt="" width={16} height={16} />
           </button>
-          <button type="button" className="ot-icon-btn" aria-label="Filter">
+          <button type="button" className="ot-icon-btn">
             <img src={FilterIcon} alt="" width={16} height={16} />
           </button>
-          <button type="button" className="ot-icon-btn" aria-label="Sort">
+          <button type="button" className="ot-icon-btn">
             <img src={SortIcon} alt="" width={16} height={16} />
           </button>
         </div>
         <div className="ot-search">
           <img src={SearchIcon} alt="" width={16} height={16} />
-          <input type="text" placeholder="Search" aria-label="Search orders" />
+          <input
+            type="text"
+            placeholder="Search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            aria-label="Search orders"
+          />
         </div>
       </div>
 
