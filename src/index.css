@@ -25,15 +25,14 @@ body {
 }
 
 [data-theme="dark"] {
-  --bg: #0f172a;
-  --surface: #111827;
-  --surface-subtle: #0b1220;
-  --text: #e5e7eb;
-  --text-muted: #94a3b8;
+  --bg: black;
+  --surface: black;
+  --surface-subtle: black --text: white;
+  --text-muted: white;
   --border: #334155;
   --hover: #0b1220;
   --active: #1f2937;
-  --accent-subtle: #10243f;
+  --accent-subtle: black;
   --bar-actual: #6c96b1;
   --bar-proj: #345166;
   --line-proj: #6c96b1;
@@ -361,6 +360,7 @@ body {
   border-radius: 12px;
   background: var(--surface-subtle);
   margin-bottom: 12px;
+  position: relative;
 }
 
 .ot-tools {
@@ -1226,6 +1226,10 @@ body {
   width: 20px;
   height: 20px;
   margin-left: 6px;
+}
+
+[data-theme="dark"] .left-sidebar .db-icon {
+  filter: brightness(0) invert(1);
 }
 
 .db-label {
