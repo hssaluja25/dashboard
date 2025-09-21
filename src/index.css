@@ -388,6 +388,21 @@ body {
   background: rgba(0, 0, 0, 0.04);
 }
 
+.ot-select {
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+[data-theme="dark"] .ot-icon-btn img,
+[data-theme="dark"] .ot-search img {
+  filter: brightness(0) invert(1);
+}
+
 .ot-search {
   display: flex;
   align-items: center;
