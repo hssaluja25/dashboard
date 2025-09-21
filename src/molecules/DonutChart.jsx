@@ -1,20 +1,21 @@
 import React, { useMemo, useState } from "react";
 import { mockData } from "@/models/mockData";
+import { useSelector } from "react-redux";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-
-const COLORS = {
-  Direct: "#1C1C1C",
-  Affiliate: "#BAEDBD",
-  Sponsored: "#95A4FC",
-  "E-mail": "#B1E3FF",
-};
 
 const currency = (n) => `$${n.toFixed(2)}`;
 
 const DonutChart = () => {
   const data = useMemo(() => mockData.salesChannels, []);
   const [active, setActive] = useState(0);
+  const theme = useSelector((state) => state.app.theme);
 
+  const COLORS = {
+    Direct: theme === "light" ? "#1C1C1C" : "#C6C6F9",
+    Affiliate: "#BAEDBD",
+    Sponsored: "#95A4FC",
+    "E-mail": "#B1E3FF",
+  };
   return (
     <section className="donut-card">
       <h3 className="donut-title">Total Sales</h3>
@@ -46,7 +47,7 @@ const DonutChart = () => {
               <Tooltip
                 cursor={false}
                 contentStyle={{
-                  background: "var(--surface)",
+                  background: theme === "light" ? "var(--surface)" : "white",
                   border: "1px solid var(--border)",
                   borderRadius: 8,
                 }}
