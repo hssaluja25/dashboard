@@ -463,7 +463,7 @@ body {
 .ot-pager {
   display: flex;
   gap: 6px;
-  justify-content: center;
+  justify-content: end;
   padding: 12px 0 4px;
 }
 
@@ -471,11 +471,19 @@ body {
 .ot-page-num {
   appearance: none;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: none;
   padding: 4px 8px;
   border-radius: 8px;
   cursor: pointer;
   color: var(--text);
+}
+
+.ot-page-btn:hover {
+  background-color: #1C1C1C0D;
+}
+
+.ot-page-num:hover {
+  background-color: #1C1C1C0D;
 }
 
 .ot-page-num.is-active {

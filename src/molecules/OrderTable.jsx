@@ -1,6 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { mockData } from "@/models/mockData";
 import CalendarIcon from "@/assets/Calendar.svg";
+import ArrowLeft from "@/assets/ArrowLeft.svg";
+import ArrowRight from "@/assets/ArrowRight.svg";
 import Contact1 from "@/assets/Contact1.svg";
 import Contact2 from "@/assets/Contact2.svg";
 import Contact3 from "@/assets/Contact3.svg";
@@ -135,7 +137,7 @@ const OrderTable = () => {
           onClick={() => setPage((p) => Math.max(1, p - 1))}
           disabled={page === 1}
         >
-          ‹
+          <img src={ArrowLeft} alt="Previous" width={12} height={12} />
         </button>
         {Array.from({ length: pageCount }).map((_, i) => {
           const n = i + 1;
@@ -153,8 +155,9 @@ const OrderTable = () => {
           className="ot-page-btn"
           onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
           disabled={page === pageCount}
+          style={{ padding: "0px 4px" }}
         >
-          ›
+          <img src={ArrowRight} alt="Next" width={20} height={20} />
         </button>
       </div>
     </section>

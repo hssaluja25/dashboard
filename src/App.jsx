@@ -18,26 +18,42 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="dashboard">
-      {sidebarOpen && (
-        <LeftSidebar isOpen onClose={() => setSidebarOpen(false)} />
-      )}
+      <div className="dashboard">
+        {sidebarOpen && (
+          <LeftSidebar isOpen onClose={() => setSidebarOpen(false)} />
+        )}
 
-      {/* Show a dark backdrop for mobile when sidebar is open */}
-      {sidebarOpen && (
-        <div
-          className="sidebar-backdrop"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
+        {/* Show a dark backdrop for mobile when sidebar is open */}
+        {sidebarOpen && (
+          <div
+            className="sidebar-backdrop"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
 
-      <Routes>
-        <Route path="/" element={<Dashboard setRightSidebarOpen={setRightSidebarOpen} setSidebarOpen={setSidebarOpen} />} />
-        <Route path="/orders" element={<Orders />} />
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Dashboard
+                setRightSidebarOpen={setRightSidebarOpen}
+                setSidebarOpen={setSidebarOpen}
+              />
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <Orders
+                setRightSidebarOpen={setRightSidebarOpen}
+                setSidebarOpen={setSidebarOpen}
+              />
+            }
+          />
+        </Routes>
 
-      {rightSidebarOpen && <RightSidebar />}
-    </div>
+        {rightSidebarOpen && <RightSidebar />}
+      </div>
     </BrowserRouter>
   );
 }
