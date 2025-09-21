@@ -68,8 +68,6 @@ const OrderTable = () => {
 
   return (
     <section className="orders-card">
-      <h3 className="orders-title">Orders</h3>
-
       <div className="ot-table">
         <div className="ot-row ot-head">
           <div className="ot-cell ot-check">

@@ -11,7 +11,10 @@ const Orders = ({ setSidebarOpen, setRightSidebarOpen }) => {
       />
 
       <section className="dashboard-content">
-        <OrderTable />
+        <div className="extra-padding">
+          <div className="ol-title">Order List</div>
+          <OrderTable />
+        </div>
       </section>
     </main>
   );
