@@ -36,6 +36,8 @@ const OrderTable = () => {
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(() => new Set());
+  const [sortedOn, setSortedOn] = useState(false);
+  const [sortDir, setSortDir] = useState("asc");
   const avatars = useMemo(
     () => [Contact1, Contact2, Contact3, Contact4, Contact5, Contact6],
     []
@@ -66,16 +68,35 @@ const OrderTable = () => {
     });
   }, [rows, query]);
 
-  const pageCount = Math.ceil(filtered.length / PAGE_SIZE) || 1;
+  const sortByOrderId = useMemo(
+    () => (arr) => {
+      const parseNum = (id) =>
+        parseInt(String(id).replace(/\D+/g, ""), 10) || 0;
+      const s = arr.slice().sort((a, b) => {
+        const va = parseNum(a.orderId);
+        const vb = parseNum(b.orderId);
+        return va === vb ? 0 : va < vb ? -1 : 1;
+      });
+      return sortDir === "asc" ? s : s.reverse();
+    },
+    [sortDir]
+  );
+
+  const working = useMemo(
+    () => (sortedOn ? sortByOrderId(filtered) : filtered),
+    [filtered, sortedOn, sortByOrderId]
+  );
+
+  const pageCount = Math.ceil(working.length / PAGE_SIZE) || 1;
   const start = Math.min(
     (page - 1) * PAGE_SIZE,
     Math.max(0, (pageCount - 1) * PAGE_SIZE)
   );
-  const slice = filtered.slice(start, start + PAGE_SIZE);
+  const slice = working.slice(start, start + PAGE_SIZE);
 
   useEffect(() => {
     setPage(1);
-  }, [query]);
+  }, [query, sortedOn, sortDir]);
 
   const toggle = (id) => {
     setSelected((prev) => {
@@ -109,8 +130,17 @@ const OrderTable = () => {
           <button type="button" className="ot-icon-btn">
             <img src={FilterIcon} alt="" width={16} height={16} />
           </button>
-          <button type="button" className="ot-icon-btn">
-            <img src={SortIcon} alt="" width={16} height={16} />
+          <button
+            type="button"
+            className="ot-icon-btn"
+            onClick={() => {
+              setSortedOn(true);
+              setSortDir((d) =>
+                sortedOn ? (d === "asc" ? "desc" : "asc") : "asc"
+              );
+            }}
+          >
+            <img src={SortIcon} alt="Sort" width={16} height={16} />
           </button>
         </div>
         <div className="ot-search">
